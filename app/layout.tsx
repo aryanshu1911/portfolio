@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
@@ -59,6 +60,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body>
+        <Script id="identity-reveal-session" strategy="beforeInteractive">
+          {`try { if (window.sessionStorage.getItem("portfolio.identity-reveal.seen") === "true") { document.documentElement.dataset.identityReveal = "complete"; } } catch {}`}
+        </Script>
         <Providers>
           <SkipLink targetId="main-content">Skip to main content</SkipLink>
           <div className="site-shell">

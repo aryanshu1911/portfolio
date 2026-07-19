@@ -98,6 +98,12 @@ main {
   margin-inline: auto;
 }
 
+@media (min-width: 48rem) {
+  .site-container {
+    width: min(100% - 3rem, 72rem);
+  }
+}
+
 .site-header {
   position: sticky;
   z-index: 20;
@@ -278,7 +284,8 @@ main {
 }
 
 .button--secondary {
-  border-color: var(--border);
+  /* J — raised border from 8% to 14% white for visible affordance */
+  border-color: rgb(255 255 255 / 14%);
   background: transparent;
   color: var(--text-primary);
 }
@@ -296,33 +303,6 @@ main {
 .button--ghost:hover {
   background: var(--surface);
   color: var(--text-primary);
-}
-
-.shell-placeholder {
-  display: grid;
-  flex: 1;
-  width: min(100% - 2rem, 72rem);
-  min-height: calc(100vh - 9rem);
-  margin-inline: auto;
-  align-content: center;
-  gap: 1rem;
-  padding-block: 6rem;
-}
-
-.shell-placeholder h1 {
-  max-width: 44rem;
-  margin: 0;
-  font-size: clamp(2.25rem, 7vw, 4.5rem);
-  letter-spacing: -0.05em;
-  line-height: 1;
-}
-
-.shell-placeholder p:not(.eyebrow) {
-  max-width: 34rem;
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
 }
 
 .eyebrow {
@@ -379,10 +359,294 @@ main {
   transform: translateY(0);
 }
 
+/* ─── Hero ─────────────────────────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  display: grid;
+  /* Item 8 — pull hero higher: use 90svh instead of 100svh */
+  min-height: calc(90svh - 4.5rem);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    /* I — reduced emerald glow from 10% to 7% opacity */
+    radial-gradient(circle at 78% 28%, rgb(16 185 129 / 7%), transparent 28rem),
+    linear-gradient(135deg, var(--background), var(--surface));
+  opacity: 0;
+  transform: scale(1.03);
+  /* background and its scale run together; no shared override needed */
+  transition: opacity 500ms ease, transform 700ms ease;
+}
+
+.hero__inner {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  /* Item 8 — reduce bottom padding on mobile */
+  padding-block: 3rem 5rem;
+}
+
+.hero__content {
+  display: grid;
+  /* Item 6 — remove uniform gap; individual margins below control spacing */
+  gap: 0;
+}
+
+/* Item 3 — each element declares its own transition in full; no shared shorthand override */
+.hero__eyebrow {
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  /* G — eyebrow leads at 0ms so it arrives before the name */
+  transition: opacity 500ms ease 0ms,
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms;
+}
+
+.hero__name {
+  font-size: clamp(2.9rem, 9vw, 5.875rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.92;
+  margin: 0 0 1.5rem;
+  max-width: 52rem;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(1rem);
+  clip-path: inset(0 0 100% 0);
+  /* G — name starts 150ms after eyebrow to give it a clear lead */
+  transition: opacity 500ms ease 150ms,
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 150ms,
+              clip-path 500ms ease 150ms;
+}
+
+.hero__details {
+  display: grid;
+  max-width: 38rem;
+  gap: 1.25rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 400ms ease 400ms,
+              transform 400ms cubic-bezier(0.16, 1, 0.3, 1) 400ms;
+}
+
+.hero__title,
+.hero__tagline {
+  margin: 0;
+}
+
+.hero__title {
+  color: var(--text-primary);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+
+.hero__tagline {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 300ms ease 800ms,
+              transform 300ms cubic-bezier(0.16, 1, 0.3, 1) 800ms;
+}
+
+/* ─── Identity Card ─────────────────────────────────────────────────────────── */
+
+.hero__identity {
+  display: grid;
+  justify-self: start;
+  width: min(100%, 22rem);
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  box-shadow: var(--shadow-subtle);
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(0.96);
+  transition: opacity 500ms ease 600ms,
+              filter 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms,
+              transform 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms;
+}
+
+.hero__identity-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-soft);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hero__identity-status-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  flex-shrink: 0;
+}
+
+.hero__identity-status-dot--pulse {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.2); }
+}
+
+/* Item 7 — portrait replaces monogram; overflow and position now in CSS */
+/* Item 10 — increased portrait size: 8rem × 8rem */
+.hero__identity-portrait {
+  position: relative;
+  width: 8rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface-elevated);
+}
+
+.hero__identity-portrait-img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero__identity-meta {
+  display: grid;
+  gap: 0;
+}
+
+.hero__identity-meta-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  /* F — increased from 0.375rem to 0.5rem for comfortable row height */
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--divider);
+}
+
+.hero__identity-meta-row:first-child {
+  padding-top: 0;
+}
+
+.hero__identity-meta-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero__identity-meta-label {
+  color: var(--text-muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero__identity-meta-value {
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 550;
+  text-align: right;
+}
+
+/* Item 5 — status value inline-flex moved from JSX style prop */
+.hero__identity-meta-value--status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+/* Item 5 — monospace token value moved from JSX style prop */
+.hero__identity-meta-value--mono {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+}
+
+/* ─── Reveal State Transitions ──────────────────────────────────────────────── */
+
+.hero[data-reveal="active"] .hero__background {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero[data-reveal="active"] .hero__eyebrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero[data-reveal="active"] .hero__name {
+  opacity: 1;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0);
+}
+
+.hero[data-reveal="active"] .hero__details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero[data-reveal="active"] .hero__identity {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.hero[data-reveal="active"] .hero__actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bypass — returning visitors see hero instantly without any transition */
+.hero[data-reveal="complete"] .hero__background,
+.hero[data-reveal="complete"] .hero__eyebrow,
+.hero[data-reveal="complete"] .hero__name,
+.hero[data-reveal="complete"] .hero__details,
+.hero[data-reveal="complete"] .hero__identity,
+.hero[data-reveal="complete"] .hero__actions,
+[data-identity-reveal="complete"] .hero__background,
+[data-identity-reveal="complete"] .hero__eyebrow,
+[data-identity-reveal="complete"] .hero__name,
+[data-identity-reveal="complete"] .hero__details,
+[data-identity-reveal="complete"] .hero__identity,
+[data-identity-reveal="complete"] .hero__actions {
+  opacity: 1 !important;
+  filter: blur(0) !important;
+  transform: none !important;
+  clip-path: none !important;
+  transition: none !important;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+
 @media (min-width: 48rem) {
-  .site-container,
-  .shell-placeholder {
-    width: min(100% - 3rem, 72rem);
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+    gap: 3rem;
+    padding-block: 5rem;
+  }
+
+  .hero__identity {
+    justify-self: end;
   }
 }
 
@@ -393,6 +657,18 @@ main {
 
   .mobile-menu-trigger {
     display: none;
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
+    padding-block: 6rem;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .hero__name {
+    /* H — tighten tracking at small clamp values to prevent kerning collisions */
+    letter-spacing: -0.05em;
   }
 }
 
