@@ -74,7 +74,7 @@ export function HeroIdentityReveal() {
             </p>
             <div className="hero__actions">
               <a className="button button--primary" href="#projects">
-                View selected work
+                Download Resume
               </a>
               <a className="button button--secondary" href="#contact">
                 Start a conversation
@@ -92,7 +92,7 @@ export function HeroIdentityReveal() {
           {/* A — aria-hidden removed from portrait; alt text is now correctly exposed */}
           <div className="hero__identity-portrait">
             <Image
-              src="/images/profile/myself_1.jpeg"
+              src="/images/profile/myself_3.png"
               alt="Aryanshu Singh"
               fill
               priority

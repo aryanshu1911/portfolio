@@ -94,7 +94,7 @@ main {
 }
 
 .site-container {
-  width: min(100% - 2rem, 72rem);
+  width: min(100% - 3rem, 85rem);
   margin-inline: auto;
 }
 
@@ -285,7 +285,7 @@ main {
 
 .button--secondary {
   /* J — raised border from 8% to 14% white for visible affordance */
-  border-color: rgb(255 255 255 / 14%);
+  border-color: rgb(255 255 255 / 25%);
   background: transparent;
   color: var(--text-primary);
 }
@@ -321,7 +321,7 @@ main {
 
 .site-footer__inner {
   display: flex;
-  min-height: 5rem;
+  min-height: 3.5rem;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -376,7 +376,7 @@ main {
   inset: 0;
   background:
     /* I — reduced emerald glow from 10% to 7% opacity */
-    radial-gradient(circle at 78% 28%, rgb(16 185 129 / 7%), transparent 28rem),
+    radial-gradient(circle at 78% 28%, rgb(16 185 129 / 15%), transparent 28rem),
     linear-gradient(135deg, var(--background), var(--surface));
   opacity: 0;
   transform: scale(1.03);
@@ -409,9 +409,9 @@ main {
 }
 
 .hero__name {
-  font-size: clamp(2.9rem, 9vw, 5.875rem);
+  font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 650;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
   line-height: 0.92;
   margin: 0 0 1.5rem;
   max-width: 52rem;
@@ -442,9 +442,9 @@ main {
 
 .hero__title {
   color: var(--text-primary);
-  font-size: clamp(1.125rem, 2vw, 1.375rem);
-  font-weight: 550;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.2rem, 5vw, 1.375rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .hero__tagline {
@@ -456,7 +456,7 @@ main {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1.5rem;
   padding-top: 0.5rem;
   opacity: 0;
   transform: translateY(0.5rem);
@@ -469,7 +469,7 @@ main {
 .hero__identity {
   display: grid;
   justify-self: start;
-  width: min(100%, 22rem);
+  width: min(100%, 22.5rem);
   gap: 1.25rem;
   padding: 1.5rem;
   border: 1px solid var(--border);
@@ -517,7 +517,7 @@ main {
 /* Item 10 — increased portrait size: 8rem × 8rem */
 .hero__identity-portrait {
   position: relative;
-  width: 8rem;
+  width: 9.5rem;
   aspect-ratio: 1;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -640,8 +640,8 @@ main {
 
 @media (min-width: 48rem) {
   .hero__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
-    gap: 3rem;
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 30rem);
+    gap: 5rem;
     padding-block: 5rem;
   }
 
@@ -650,7 +650,7 @@ main {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .site-navigation {
     display: block;
   }
@@ -660,12 +660,12 @@ main {
   }
 
   .hero__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 26rem);
     padding-block: 6rem;
   }
 }
 
-@media (max-width: 47.9375rem) {
+@media (max-width: 48rem) {
   .hero__name {
     /* H — tighten tracking at small clamp values to prevent kerning collisions */
     letter-spacing: -0.05em;
