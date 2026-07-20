@@ -5,4 +5,5 @@ export type NavigationItem = {
 
 export const primaryNavigation: readonly NavigationItem[] = [
   { href: "/", label: "Home" },
+  { href: "#projects", label: "Projects" }
 ];

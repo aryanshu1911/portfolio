@@ -11,7 +11,7 @@ export function SiteFooter() {
           © {year} {siteConfig.name}
         </p>
         <a className="site-footer__link" href="#site-header">
-          Back to top
+          Back to Top
         </a>
       </Container>
     </footer>
