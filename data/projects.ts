@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Web3",
       "React",
       "Node.js",
-      "MongoDB"
+      "Pinata"
     ],
 
     highlights: [
@@ -60,20 +60,20 @@ export const projects: Project[] = [
 
   {
     id: "fraudtect",
-    title: "FrauDTect AI",
+    title: "FrauDTect",
     subtitle: "Hybrid AI-Powered Scam Detection Platform",
     status: "completed",
     homepage: true,
     featured: true,
 
     summary:
-      "Machine learning application for identifying fraudulent messages using NLP techniques.",
+      "Machine learning application for identifying fraudulent messages using Natural Language Processing (NLP) techniques.",
 
     techStack: [
       "Python",
       "Scikit-learn",
       "Logistic Regression",
-      "VirusTotal API",
+      "OCR",
     ],
 
     highlights: [
