@@ -4,37 +4,26 @@ export const professionalJourney: JourneyItem[] = [
   {
     id: "imd",
     category: "experience",
-    role: "Software Engineering Intern",
+    role: "Software Engineer Intern",
     organization: "India Meteorological Department",
     duration: "Dec 2025 – May 2026",
     location: "Regional Meteorological Centre, Mumbai",
 
     description:
-      "Developed a rainfall forecast verification system for district-wise weather warnings against observed rainfall across Maharashtra, enabling secure operational analysis and automated verification workflows.",
+      "Developed a rainfall forecast verification system with geospatial analytics, automated reporting, and role-based access for operational forecasting.",
 
     highlights: [
-      "Built a secure RBAC-enabled platform for operational forecast verification.",
-      "Developed geospatial dashboards covering 36+ districts using GeoPandas and Folium.",
+      "Built an RBAC-enabled platform for operational forecast verification.",
+      "Developed geospatial dashboards for 36+ districts using GeoPandas and Folium",
       "Implemented forecast verification metrics including Hit Rate, False Alarm Rate and Missed Events.",
       "Automated analytical report generation with interactive visualizations."
     ],
 
     badges: [
-      "React",
+      "Next.js",
       "Python",
-      "GeoPandas",
-      "Supabase"
-    ],
-
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/aryanshu1911/imd-mumbai",
-      },
-      {
-        label: "Live System",
-        href: "https://imd-mumbai.vercel.app/"
-      }
+      "Leaflet",
+      "PostgreSQL"
     ]
   },
 
@@ -42,11 +31,11 @@ export const professionalJourney: JourneyItem[] = [
     id: "csesa",
     category: "leadership",
     role: "Chief Editor & Magazine Head",
-    organization: "Computer Science Student Association (CSESA)",
+    organization: "Computer Science Student Association (CSESA - IoT & CSBT)",
     duration: "Sep 2024 - Apr 2025",
     location: "Lokmanya Tilak College of Engineering, Navi Mumbai",
     description:
-      "Led the editorial and documentation initiatives for departmental events while managing the complete publication lifecycle of the annual department magazine.",
+      "Led editorial and documentation initiatives for departmental events while managing the publication lifecycle of the annual department magazine.",
 
     highlights: [
       "Led a six-member editorial team throughout planning, editing and publication.",
@@ -57,9 +46,8 @@ export const professionalJourney: JourneyItem[] = [
 
     badges: [
       "Leadership",
-      "Editorial",
       "Documentation",
-      "Project Management",
+      "Management",
       "Team Coordination"
     ]
   }
