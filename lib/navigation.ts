@@ -5,7 +5,8 @@ export type NavigationItem = {
 
 export const primaryNavigation: readonly NavigationItem[] = [
   { href: "/", label: "Home" },
-  { href: "#professional-journey", label: "Professional Journey"},
+  { href: "#professional-journey", label: "Experience"},
   { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills"}
+  { href: "#skills", label: "Skills"},
+  { href: "#achievements", label: "Achievements"}
 ];

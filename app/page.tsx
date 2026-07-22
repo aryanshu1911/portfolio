@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero/hero";
 import { ProjectsSection } from "@/components/projects";
 import ProfessionalJourneySection from "@/components/professional-journey/ProfessionalJourneySection";
 import SkillsSection from "@/components/skills/SkillsSection";
+import AchievementsSection from "@/components/achievements/AchievementsSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <ProfessionalJourneySection />
       <ProjectsSection />
       <SkillsSection/>
+      <AchievementsSection />
     </main>
   );
 }
