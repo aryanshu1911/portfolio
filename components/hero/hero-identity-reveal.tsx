@@ -92,7 +92,7 @@ export function HeroIdentityReveal() {
           {/* A — aria-hidden removed from portrait; alt text is now correctly exposed */}
           <div className="hero__identity-portrait">
             <Image
-              src="/images/profile/myself_3.png"
+              src="/profile/portrait.png"
               alt="Aryanshu Singh"
               fill
               priority

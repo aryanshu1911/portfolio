@@ -937,3 +937,12 @@ main {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* ---------- Global Custom Cursor ---------- */
+
+html.cursor-none,
+html.cursor-none *,
+html.cursor-none *::before,
+html.cursor-none *::after {
+  cursor: none !important;
+}
