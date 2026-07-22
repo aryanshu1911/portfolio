@@ -1,3 +1,4 @@
+import { Container } from "@/components/ui/container";
 import { professionalJourney } from "@/data/professionalJourney";
 import JourneyCard from "./JourneyCard";
 
@@ -5,16 +6,9 @@ export default function ProfessionalJourneySection() {
   return (
     <section
       id="professional-journey"
-      className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-8"
+      className="py-24 lg:px-8"
     >
-      <div className="
-        mt-4
-        text-4xl
-        font-bold
-        tracking-tight
-        leading-[1.05]
-        md:text-5xl
-        ">
+      <Container>
         <span className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-400">
           Professional Journey
         </span>
@@ -31,7 +25,7 @@ export default function ProfessionalJourneySection() {
           Experiences that shaped my technical expertise, leadership,
           and ability to deliver real-world solutions.
         </p>
-      </div>
+      </Container>
 
       <div className="mt-16 flex flex-col gap-16">
         {professionalJourney.map((item) => (
