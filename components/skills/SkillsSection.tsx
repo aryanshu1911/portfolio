@@ -5,59 +5,31 @@ import SkillCategory from "./SkillCategory";
 
 const technologyStack = [
   {
-    title: "Languages",
-    skills: ["Python", "Java", "C", "SQL", "JavaScript"],
+    title: "Core Languages",
+    skills: ["Python", "Java", "C", "SQL", "TypeScript"],
   },
   {
-    title: "Frameworks",
+    title: "Application Development",
     skills: [
-      "FastAPI",
-      "Next.js",
-      "React",
-      "Node.js",
-      "Tailwind CSS",
-      "REST APIs",
-    ],
+      "FastAPI", "Next.js", "React", "Node.js", "REST APIs"],
   },
   {
-    title: "Databases",
-    skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "SQLite",
-      "Supabase",
-    ],
-  },
-  {
-    title: "AI / ML",
-    skills: [
-      "Scikit-learn",
-      "Pandas",
-      "NumPy",
-      "TensorFlow",
-      "NLP",
-    ],
+    title: "Artificial Intelligence & Machine Learning",
+    skills: ["Scikit-learn", "Random Forest", "Model Evaluation", "Prompt Engineering", "Pandas", "NumPy", "NLP"],
   },
   {
     title: "Cybersecurity",
-    skills: [
-      "OWASP Top 10",
-      "OSINT",
-      "Threat Intelligence",
-      "CTFs",
-      "Vulnerability Assessment",
-    ],
+    skills: ["Nmap", "Wireshark", "Burp Suite", "Cryptography", "Vulnerability Assessment", "Network Security"],
   },
   {
-    title: "Tools",
-    skills: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "Linux",
-      "VS Code",
-    ],
+    title: "Data & Analytics",
+    skills: ["GeoPandas", "Matplotlib", "Plotly", "Streamlit"],
   },
+   {
+    title: "Infrastructure",
+    skills: [
+      "PostgreSQL", "MongoDB", "Supabase", "Git / GitHub", "Linux"],
+  }
 ];
 
 export default function SkillsSection() {

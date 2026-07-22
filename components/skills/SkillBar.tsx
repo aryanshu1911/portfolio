@@ -6,10 +6,10 @@ interface ProgressBarProps {
 }
 
 const overview = [
-  { title: "Backend Development", value: 92 },
-  { title: "Artificial Intelligence & Machine Learning", value: 86 },
-  { title: "Cybersecurity", value: 84 },
-  { title: "Databases", value: 80 },
+  { title: "Backend Development", value: 90 },
+  { title: "Artificial Intelligence & Machine Learning", value: 82 },
+  { title: "Cybersecurity", value: 82 },
+  { title: "Databases", value: 78 },
   { title: "Frontend", value: 68 },
 ];
 
