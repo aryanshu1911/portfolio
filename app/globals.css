@@ -14,7 +14,7 @@
   --text-muted: rgb(255 255 255 / 52%);
 
   /* Borders */
-  --border: rgb(255 255 255 / 7%);
+  --border: rgb(255 255 255 / 14%);
   --divider: rgb(255 255 255 / 8%);
 
   /* Accent */
@@ -39,7 +39,7 @@
   --divider: rgb(0 0 0 / 10%);
   --focus-ring: #059669;
   --header-background: rgb(255 255 255 / 95%);
-  --shadow-subtle: 0 8px 24px rgb(24 24 27 / 10%);
+  --shadow-subtle: 0 8px 24px rgb(24 24 27 / 8%);
 }
 
 @theme inline {
