@@ -8,5 +8,6 @@ export const primaryNavigation: readonly NavigationItem[] = [
   { href: "#experience", label: "Experience"},
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills"},
-  { href: "#achievements", label: "Achievements"}
+  { href: "#achievements", label: "Achievements"},
+  { href: "#contact", label: "Contact"}
 ];

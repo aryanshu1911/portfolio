@@ -14,8 +14,8 @@ export default function AchievementCard({
 
   return (
     <article
-      className={`group/card w-full max-w-[72%] transition-all duration-300 ${
-        isLeft ? "mr-auto lg:mr-0" : "ml-auto lg:ml-80"
+      className={`group/card w-full max-w-[60%] transition-all duration-300 ${
+        isLeft ? "mr-auto lg:mr-0" : "ml-auto lg:ml-120"
       }`}
     >
       <div
@@ -23,7 +23,7 @@ export default function AchievementCard({
           relative
           grid
           items-center
-          gap-4
+          gap-5
           overflow-hidden
           rounded-3xl
           border
@@ -33,8 +33,8 @@ export default function AchievementCard({
           via-neutral-50
           to-neutral-100
           backdrop-blur-sm
-          px-5
-          py-4
+          px-4
+          py-3
           shadow-sm
           transition-all
           duration-300
@@ -92,19 +92,19 @@ export default function AchievementCard({
             isLeft ? "lg:col-span-3" : "lg:col-span-3 lg:order-1"
           }`}
         >
-          <span className="mb-2 text-[9px] font-semibold uppercase tracking-[0.30em] text-emerald-700 dark:text-emerald-300">
+          <span className="mb-1.5 text-[8.5px] font-semibold uppercase tracking-[0.25em] text-emerald-700 dark:text-emerald-300">
             {achievement.category}
           </span>
 
-          <h3 className="text-[1.55rem] font-bold leading-tight text-neutral-900 dark:text-white">
+          <h3 className="text-[1.4rem] font-bold leading-tight text-neutral-900 dark:text-white">
             {achievement.title}
           </h3>
 
-          <p className="mt-2 text-[14px] text-neutral-600 dark:text-neutral-300">
+          <p className="mt-1.5 text-[13px] leading-4 text-neutral-600 dark:text-neutral-300">
             {achievement.subtitle}
           </p>
 
-          <p className="mt-4 text-[13px] tracking-wide text-neutral-500 dark:text-neutral-400">
+          <p className="mt-3 text-[12px] tracking-wide text-neutral-500 dark:text-neutral-400">
             {achievement.date}
           </p>
 
@@ -112,12 +112,12 @@ export default function AchievementCard({
             type="button"
             className="group/explore mt-5 inline-flex w-fit items-center gap-1.5"
           >
-            <span className="text-[14px] font-semibold text-neutral-900 transition-colors duration-300 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400">
+            <span className="text-[15px] font-semibold text-neutral-900 transition-colors duration-300 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400">
               {achievement.cta}
             </span>
 
             <ArrowRight
-              size={16}
+              size={15}
               className="text-neutral-900 transition-all duration-300 group-hover/explore:translate-x-1 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400"
             />
           </button>

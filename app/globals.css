@@ -520,7 +520,7 @@ main {
 }
 
 .site-footer__link:hover {
-  color: var(--accent-soft);
+  color: var(--accent-hover);
 }
 
 .skip-link {

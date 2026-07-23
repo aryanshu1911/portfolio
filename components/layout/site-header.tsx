@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/container";
-import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { SiteNavigation } from "@/components/layout/site-navigation";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { siteConfig } from "@/lib/site";
@@ -14,7 +13,6 @@ export function SiteHeader() {
         <SiteNavigation />
         <div className="header-actions">
           <ThemeToggle />
-          <MobileNavigation />
         </div>
       </Container>
     </header>

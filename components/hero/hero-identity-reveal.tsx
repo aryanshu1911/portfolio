@@ -73,8 +73,13 @@ export function HeroIdentityReveal() {
               and cybersecurity into scalable real-world solutions.
             </p>
             <div className="hero__actions">
-              <a className="button button--primary" href="#projects">
-                Download Resume
+              <a
+                className="button button--primary w-[180px]"
+                href="https://drive.google.com/file/d/1vI4D1PlnVfxB2pxgMOZFNopoR_X0Nm5w/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fetch Resume
               </a>
               <a className="button button--secondary" href="#contact">
                 Start a conversation
