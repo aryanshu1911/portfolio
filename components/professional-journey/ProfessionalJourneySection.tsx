@@ -5,11 +5,11 @@ import JourneyCard from "./JourneyCard";
 export default function ProfessionalJourneySection() {
   return (
     <section
-      id="professional-journey"
+      id="experience"
       className="py-24 lg:px-8"
     >
       <Container>
-        <span className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-400">
+        <span className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-400">
           Professional Journey
         </span>
 
