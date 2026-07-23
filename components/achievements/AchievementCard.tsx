@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { Achievement } from "@/data/achievements";
 
@@ -108,19 +109,19 @@ export default function AchievementCard({
             {achievement.date}
           </p>
 
-          <button
-            type="button"
-            className="group/explore mt-5 inline-flex w-fit items-center gap-1.5"
-          >
-            <span className="text-[15px] font-semibold text-neutral-900 transition-colors duration-300 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400">
-              {achievement.cta}
-            </span>
+          <Link
+  href={`/achievements#${achievement.id}`}
+  className="group/explore mt-5 inline-flex w-fit items-center gap-1.5"
+>
+  <span className="text-[15px] font-semibold text-neutral-900 transition-colors duration-300 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400">
+    {achievement.cta}
+  </span>
 
-            <ArrowRight
-              size={15}
-              className="text-neutral-900 transition-all duration-300 group-hover/explore:translate-x-1 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400"
-            />
-          </button>
+  <ArrowRight
+    size={15}
+    className="text-neutral-900 transition-all duration-300 group-hover/explore:translate-x-1 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400"
+  />
+</Link>
         </div>
       </div>
     </article>

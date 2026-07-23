@@ -1,17 +1,38 @@
 export interface Achievement {
   id: string;
   slug: string;
+
   category: string;
   badge: string;
+
   title: string;
   subtitle: string;
   description: string;
+
+  overview?: string;
+
+  organization?: string;
+  location?: string;
+  duration?: string;
+
+  contributions?: string[];
+  highlights?: string[];
+  technologies?: string[];
+
+  resources?: {
+    label: string;
+    href: string;
+  }[];
+
   image: string;
   imagePosition?: string;
+
   date: string;
   cta: string;
   layout: "left" | "right";
 }
+
+// ------------------------------ IMD INTERNSHIP -----------------------------------------
 
 export const achievements: Achievement[] = [
   {
@@ -29,13 +50,15 @@ export const achievements: Achievement[] = [
     layout: "left",
   },
 
+  // -------------------------- CHAKRAVYUHA CTF 2025 ---------------------------------------
+
   {
     id: "chakravyuha-2025",
     slug: "chakravyuha-ctf-2025",
     category: "Cybersecurity Competition",
     badge: "Competition",
     title: "Chakravyuha CTF 2025",
-    subtitle: "Ranked 4/448 Teams in 36-hour National-level CTF",
+    subtitle: "A 36-hour National-level CTF Competition",
     description:
       "Qualified among the nation's top participants by solving real-world cybersecurity challenges across multiple domains.",
     image: "/achievements/chakravyuha.png",
@@ -43,6 +66,8 @@ export const achievements: Achievement[] = [
     cta: "Explore",
     layout: "right",
   },
+
+// ----------------------- GOOGLE CYBERSECURITY CERTIFICATE ------------------------------------
 
   {
     id: "google-cybersecurity",
@@ -59,20 +84,89 @@ export const achievements: Achievement[] = [
     layout: "left",
   },
 
+// ---------------------------------- SAFEHIRE ------------------------------------------------- 
+
   {
-    id: "safehire",
-    slug: "safehire-research",
-    category: "Research & Innovation",
-    badge: "Research",
-    title: "SafeHire",
-    subtitle: "Digital Identity Verification System for Secure Recruitment",
+  id: "safehire",
+  slug: "safehire-research",
+  category: "Research & Innovation",
+  badge: "Research",
+  title: "SafeHire",
+  subtitle: "Digital Identity Verification System for Secure Recruitment",
+
+  description:
+    "A privacy-preserving recruitment verification framework leveraging Zero-Knowledge Proofs to combat identity fraud during hiring.",
+
+  overview:
+    "SafeHire was developed as our Final Year Major Project to address identity fraud in recruitment through privacy-preserving digital verification. The project evolved beyond a software prototype into a complete academic research initiative, including formal documentation, a research publication, and technical presentation. The work explored how Zero-Knowledge Proofs could enable trusted verification without exposing sensitive personal information.",
+
+  organization:
+    "Lokmanya Tilak College of Engineering",
+
+  location:
+    "Navi Mumbai, India",
+
+  duration:
+    "Academic Year 2025–2026",
+
+  contributions: [
+    "Participated in manual testing and system validation throughout development.",
+    "Reviewed implementation workflows and project deliverables.",
+    "Performed code review and quality verification with the development team.",
+    "Contributed to technical documentation and project refinement.",
+    "Co-authored the project documentation and research work."
+  ],
+
+  highlights: [
+    "Completed as the Final Year Major Project.",
+    "Prepared a comprehensive blackbook and technical project report.",
+    "Authored and presented a research paper.",
+    "Research paper published.",
+    "Collaborated closely with the project team throughout the development lifecycle."
+  ],
+
+  technologies: [
+    "Next.js",
+    "Supabase",
+    "Anon Aadhaar",
+    "TypeScript",
+  ],
+
+  resources: [
+    {
+      label: "🌐 Live Demo",
+      href: "https://safe-hire.in"
+    },
+    {
+      label: "📄 Published Research Paper (PDF)",
+      href: "https://drive.google.com/file/d/1G6IXlP6hUrpQm1VgvOOBxIVOmWwV9X6o/view?usp=sharing"
+    }
+  ],
+
+  image: "/achievements/safe-hire.png",
+  date: "2025–2026",
+  cta: "Explore",
+  layout: "right"
+},
+
+// ----------------------------------------- CHAKRAVYUHA 2.0 -----------------------------------------
+
+  {
+    id: "chakravyuha-2026",
+    slug: "chakravyuha-ctf-2026",
+    category: "Cybersecurity Competition",
+    badge: "Competition",
+    title: "Chakravyuha CTF 2.0",
+    subtitle: "A 42-hour National-level CTF Competition",
     description:
-      "Designed a privacy-preserving recruitment verification framework powered by Zero-Knowledge Proofs.",
-    image: "/achievements/safe-hire.png",
-    date: "2025 - 2026",
+      "Achieved a competitive national ranking by solving advanced cybersecurity challenges under time constraints.",
+    image: "/achievements/chakravyuha2.png",
+    date: "April 2026",
     cta: "Explore",
-    layout: "right",
+    layout: "left",
   },
+
+// ----------------------------------------- HACKERS GAMBIT -----------------------------------------------
 
   {
   id: "hackers-gambit",
@@ -86,21 +180,6 @@ export const achievements: Achievement[] = [
   imagePosition: "object-top",
   date: "October 2025",
   cta: "Explore",
-  layout: "left",
+  layout: "right",
 },
-
-  {
-    id: "chakravyuha-2026",
-    slug: "chakravyuha-ctf-2026",
-    category: "Cybersecurity Competition",
-    badge: "Competition",
-    title: "Chakravyuha CTF 2.0",
-    subtitle: "Ranked 3/420 Teams in 42-hour National-level CTF",
-    description:
-      "Achieved a competitive national ranking by solving advanced cybersecurity challenges under time constraints.",
-    image: "/achievements/chakravyuha2.png",
-    date: "April 2026",
-    cta: "Explore",
-    layout: "right",
-  },
 ];
