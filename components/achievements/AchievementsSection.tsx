@@ -1,6 +1,7 @@
 import { achievements } from "@/data/achievements";
 import AchievementCard from "./AchievementCard";
 import Background from "./Background";
+import Link from "next/link";
 
 export default function AchievementsSection() {
   return (
@@ -37,12 +38,24 @@ export default function AchievementsSection() {
 
       {/* Achievement Cards */}
       <div className="space-y-8 lg:space-y-8">
-        {achievements.map((achievement) => (
+        {achievements
+  .filter((achievement) => achievement.featured)
+  .map((achievement) => (
           <AchievementCard
             key={achievement.id}
             achievement={achievement}
           />
         ))}
+        <div className="mt-16 flex flex-col items-center gap-6">
+  <div className="mt-10 flex justify-center">
+    <Link
+      href="/achievements"
+      className="button button--primary"
+    >
+      View All Achievements →
+    </Link>
+  </div>
+</div>
       </div>
     </section>
   );

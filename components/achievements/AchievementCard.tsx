@@ -110,7 +110,7 @@ export default function AchievementCard({
           </p>
 
           <Link
-  href={`/achievements#${achievement.id}`}
+  href={`/achievements/${achievement.slug}`}
   className="group/explore mt-5 inline-flex w-fit items-center gap-1.5"
 >
   <span className="text-[15px] font-semibold text-neutral-900 transition-colors duration-300 group-hover/explore:text-emerald-600 dark:text-white dark:group-hover/explore:text-emerald-400">

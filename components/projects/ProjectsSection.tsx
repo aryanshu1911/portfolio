@@ -29,15 +29,15 @@ export function ProjectsSection() {
           />
         ))}
         </div>
-        <div className="mt-16 flex flex-col items-center gap-6">
-          <div className="mt-16 flex justify-center">
-            <Link
-              href="/projects"
-              className="button button--primary"
-            >
-              Explore All Projects →
-            </Link>
-          </div>
+        <div className="mt-10 flex flex-col items-center gap-6">
+          <div className="mt-10 flex justify-center">
+  <Link
+    href="/projects"
+    className="button button--primary"
+  >
+    Explore All Projects →
+  </Link>
+</div>
         </div>
       </Container>
     </section>
