@@ -1,13 +1,15 @@
+import Background from "@/components/achievements/Background";
+import AchievementCard from "@/components/achievements/AchievementCard";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/sectionHeading";
-
-import AchievementCard from "@/components/achievements/AchievementCard";
 import { achievements } from "@/data/achievements";
 
 export default function AchievementsPage() {
   return (
-    <main className="py-24">
-      <Container className="max-w-7xl">
+    <main className="relative isolate overflow-hidden py-24">
+      <Background />
+
+      <Container className="relative z-10 max-w-7xl">
         <SectionHeading
           eyebrow="Achievements"
           title="Milestones & Recognition"

@@ -88,34 +88,36 @@ export default async function AchievementsPage({
             </div>
           </section>
 
-          <section className="mt-12 border-t border-neutral-200 pt-8 dark:border-white/10">
-            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
-              Resources
-            </h2>
+          {achievement.resources && achievement.resources.length > 0 && (
+  <section className="mt-12 border-t border-neutral-200 pt-8 dark:border-white/10">
+    <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
+      Resources
+    </h2>
 
-            <div className="mt-5 flex gap-3">
-              <a
-                href="https://safe-hire.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Live Demo"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-300 transition hover:border-emerald-500 hover:text-emerald-500 dark:border-white/10"
-              >
-                <Globe size={18} />
-              </a>
+    <div className="mt-5 flex flex-wrap gap-3">
+      {achievement.resources.map((resource) => (
+        <a
+          key={resource.label}
+          href={resource.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={resource.label}
+          className="flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-2 transition hover:border-emerald-500 hover:text-emerald-500 dark:border-white/10"
+        >
+          {resource.label.toLowerCase().includes("paper") ? (
+            <FileText size={18} />
+          ) : (
+            <Globe size={18} />
+          )}
 
-              <a
-                href="https://drive.google.com/file/d/1G6IXlP6hUrpQm1VgvOOBxIVOmWwV9X6o/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Research Paper"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-300 transition hover:border-emerald-500 hover:text-emerald-500 dark:border-white/10"
-              >
-                <FileText size={18} />
-              </a>
-            </div>
-          </section>
-        </article>
+          <span className="text-sm font-medium">
+            {resource.label}
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}        </article>
       </Container>
     </main>
   );
