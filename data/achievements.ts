@@ -383,7 +383,7 @@ export const achievements: Achievement[] = [
     {
       title: "Overview",
       content:
-        "Chakravyuha CTF 2.0 was a Minecraft-themed national Capture The Flag (CTF) competition organized by CSESA (IoT & CSBT), Lokmanya Tilak College of Engineering, in collaboration with PODS Technology Solutions Pvt. Ltd. Competing as Team 'Bedrock Breakers', we progressed through two online qualification rounds to reach the offline grand finale while solving progressively challenging cybersecurity problems across multiple domains."
+        "Chakravyuha 2.0 was a Minecraft-themed national Capture The Flag (CTF) competition organized by CSESA (IoT & CSBT), Lokmanya Tilak College of Engineering, in collaboration with PODS Technology Solutions Pvt. Ltd. Competing as Team 'Bedrock Breakers', we progressed through two online qualification rounds to reach the offline grand finale while solving progressively challenging cybersecurity problems across multiple domains."
     },
 
     {
